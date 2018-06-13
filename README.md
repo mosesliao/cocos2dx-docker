@@ -1,4 +1,5 @@
 # Cocos2dx Android Docker
+[![CircleCI](https://circleci.com/gh/liaogz82/cocos2dx-docker.svg?style=svg)](https://circleci.com/gh/liaogz82/cocos2dx-docker)
 
 ## Getting started
 
