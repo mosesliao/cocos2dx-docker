@@ -2,9 +2,10 @@ version: 3
 
 jobs:
   build:
-    machine:
-      docker_layer_caching: true
+    machine: true
 
     steps:
       - checkout
-      - docker build 3.16-r13b -t cocos2dx:3.16-r13b
+      - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
+      - run: docker build 3.16-r13b -t mosesliao/cocos2dx:3.16-r13b
+      - run: docker push mosesliao/cocos2dx:3.16-r13b
