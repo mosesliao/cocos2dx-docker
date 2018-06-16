@@ -1,7 +1,9 @@
 FROM ubuntu:18.04
 
 RUN apt-get -y update
-RUN apt-get -y install software-properties-common git locales ant unzip g++ libgdk-pixbuf2.0-dev python-pip cmake libx11-dev libxmu-dev libglu1-mesa-dev libgl2ps-dev libxi-dev libzip-dev libpng-dev libcurl4-gnutls-dev libfontconfig1-dev libsqlite3-dev libglew-dev libssl-dev libgtk-3-dev libglfw3 libglfw3-dev xorg-dev
+RUN apt-get -y upgrade
+
+RUN apt-get -y install software-properties-common openssl git locales ant unzip g++ libgdk-pixbuf2.0-dev python-pip cmake libx11-dev libxmu-dev libglu1-mesa-dev libgl2ps-dev libxi-dev libzip-dev libpng-dev libcurl4-gnutls-dev libfontconfig1-dev libsqlite3-dev libglew-dev libssl-dev libgtk-3-dev libglfw3 libglfw3-dev xorg-dev
 
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
@@ -32,9 +34,12 @@ RUN mkdir -p /opt/android-sdk && cd /opt/android-sdk && \
     rm *tools*linux*.zip
 
 ENV ANDROID_SDK_ROOT /opt/android-sdk
+ENV PATH="$ANDROID_SDK_ROOT/tools/bin:${PATH}"
 
 # ADD license_accepter.sh /opt/
-RUN $ANDROID_SDK_ROOT/tools/bin/sdkmanager --licenses
+RUN sdkmanager --licenses
+
+RUN echo 'y' | sdkmanager 'build-tools;27.0.3' 'platform-tools' 'platforms;android-25'
 
 RUN git clone https://github.com/cocos2d/cocos2d-x.git /cocos2dx
 RUN cd /cocos2dx && git checkout cocos2d-x-3.16
