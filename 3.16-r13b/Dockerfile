@@ -7,7 +7,6 @@ RUN apt-get -y install software-properties-common openssl git locales ant unzip 
 
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
-ENV LC_ALL en_US.UTF-8
 
 # Install Java.
 RUN \
@@ -38,8 +37,6 @@ ENV PATH="$ANDROID_SDK_ROOT/tools/bin:${PATH}"
 
 # ADD license_accepter.sh /opt/
 RUN sdkmanager --licenses
-
-RUN echo 'y' | sdkmanager 'build-tools;27.0.3' 'platform-tools' 'platforms;android-25'
 
 RUN git clone https://github.com/cocos2d/cocos2d-x.git /cocos2dx
 RUN cd /cocos2dx && git checkout cocos2d-x-3.16
