@@ -1,11 +1,26 @@
-version: 3
+version: 2
 
 jobs:
   build:
     machine: true
-
     steps:
       - checkout
-      - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
       - run: docker build 3.16-r13b -t mosesliao/cocos2dx-docker:3.16-r13b
+
+  deploy:
+    machine: true
+    steps:
+      - run: docker login -u $DOCKER_USER --password-stdin $DOCKER_PASS
       - run: docker push mosesliao/cocos2dx-docker:3.16-r13b
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
