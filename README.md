@@ -7,7 +7,7 @@ This is the github repository for cocos2dx running in docker containers. Every f
 
 There is a setup test included within the Dockerfile so it is reliable
 
-The Dockerfile at the root is the bleeding edge docker, that contains the latest ubuntu, cocos2dx, android NDK and SDK versions. Android platform-tools and build-tools are not installed. Java remains as version 8 cause other later versions are problematic
+The Dockerfile at the root is the bleeding edge docker, that contains the latest ubuntu, cocos2dx(3.17), android NDK(r17b) and SDK(26.1.1) versions. Android platform-tools and build-tools are not installed. Java remains as version 8 cause other later versions are problematic
 
 https://stackoverflow.com/questions/46402772/failed-to-install-android-sdk-java-lang-noclassdeffounderror-javax-xml-bind-a
 

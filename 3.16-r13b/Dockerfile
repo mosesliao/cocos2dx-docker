@@ -56,8 +56,8 @@ RUN cd /cocos2dx && ./setup.py
 RUN apt-get -y autoclean && apt-get -y autoremove
 
 # Testing for cocos2dx
-RUN cd /cocos2dx/build && ./install-deps-linux.sh && mkdir linux-build && \
-    cd linux-build && cmake ../..
+RUN cd /cocos2dx/build && echo 'y' | ./install-deps-linux.sh
+RUN cd /cocos2dx/build && mkdir linux-build && cd linux-build && cmake ../..
 
 # Define default command.
 CMD ["bash"]
