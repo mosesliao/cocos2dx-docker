@@ -7,6 +7,8 @@ This is the github repository for cocos2dx running in docker containers. Every f
 
 There is a setup test included within the Dockerfile so it is reliable
 
+The Dockerfile at the root is the bleeding edge docker, that contains the latest ubuntu, cocos2dx, java, android NDK and SDK versions. Android platform-tools and build-tools are not installed.
+
 ## Issues and Feedback
 
 For any other issues and feedback about this docker image, or you need another different installation with different versions of cocos2dx and NDK, please submit it to this repository.
