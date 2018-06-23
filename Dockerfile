@@ -10,15 +10,15 @@ ENV LANGUAGE en_US.UTF-8
 
 # Install Java.
 RUN \
-  echo oracle-java10-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
-  add-apt-repository -y ppa:linuxuprising/java && \
+  echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
+  add-apt-repository -y ppa:webupd8team/java && \
   apt-get update && \
-  apt-get install -y oracle-java10-installer && \
+  apt-get install -y oracle-java8-installer && \
   rm -rf /var/lib/apt/lists/* && \
   rm -rf /var/cache/oracle-jdk8-installer
 
 # Define commonly used JAVA_HOME variable
-ENV JAVA_HOME /usr/lib/jvm/java-10-oracle
+ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 RUN cd /opt && \
     wget -q https://dl.google.com/android/repository/android-ndk-r17b-linux-x86_64.zip && \
