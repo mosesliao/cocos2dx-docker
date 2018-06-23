@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu
 
 RUN apt-get -y update
 RUN apt-get -y upgrade
@@ -21,11 +21,11 @@ RUN \
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 RUN cd /opt && \
-    wget -q https://dl.google.com/android/repository/android-ndk-r13b-linux-x86_64.zip && \
+    wget -q https://dl.google.com/android/repository/android-ndk-r17b-linux-x86_64.zip && \
     unzip *ndk*linux*.zip && \
     rm *ndk*linux*.zip
 
-ENV NDK_ROOT /opt/android-ndk-r13b
+ENV NDK_ROOT /opt/android-ndk-r17b
 
 RUN mkdir -p /opt/android-sdk && cd /opt/android-sdk && \
     wget -q https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip && \
@@ -39,7 +39,7 @@ ENV PATH="$ANDROID_SDK_ROOT/tools/bin:${PATH}"
 RUN sdkmanager --licenses
 
 RUN git clone https://github.com/cocos2d/cocos2d-x.git /cocos2dx
-RUN cd /cocos2dx && git checkout cocos2d-x-3.16
+RUN cd /cocos2dx && git checkout cocos2d-x-3.17
 RUN /cocos2dx/download-deps.py --remove-download yes
 RUN cd /cocos2dx && git submodule update --init
 
