@@ -1,5 +1,6 @@
 # Cocos2dx Android Docker
 [![CircleCI](https://circleci.com/gh/liaogz82/cocos2dx-docker.svg?style=svg)](https://circleci.com/gh/liaogz82/cocos2dx-docker)
+[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/)
 
 ## Getting started
 
@@ -13,4 +14,4 @@ https://stackoverflow.com/questions/46402772/failed-to-install-android-sdk-java-
 
 ## Issues and Feedback
 
-For any other issues and feedback about this docker image, or you need another different installation with different versions of cocos2dx and NDK, please submit it to this repository.
+For any other issues and feedback about this docker image, or you need another different docker image with different versions of cocos2dx and NDK, please submit it to this repository.
