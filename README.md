@@ -1,9 +1,7 @@
 # Cocos2dx Android Docker
 [![CircleCI](https://circleci.com/gh/liaogz82/cocos2dx-docker.svg?style=svg)](https://circleci.com/gh/liaogz82/cocos2dx-docker)
-![Docker Stars](https://img.shields.io/docker/stars/mosesliao/cocos2dx-docker.svg)
-![Docker Pulls](https://img.shields.io/docker/pulls/mosesliao/cocos2dx-docker.svg)
-![Docker Automated](https://img.shields.io/docker/automated/mosesliao/cocos2dx-docker.svg)
-![Docker Build](https://img.shields.io/docker/build/mosesliao/cocos2dx-docker.svg)
+[![Docker Stars](https://img.shields.io/docker/stars/mosesliao/cocos2dx-docker.svg?style=plastic)](https://registry.hub.docker.com/v2/repositories/mosesliao/cocos2dx-docker/stars/count/) [![Docker pulls](https://img.shields.io/docker/pulls/mosesliao/cocos2dx-docker.svg?style=plastic)](https://registry.hub.docker.com/v2/repositories/mosesliao/cocos2dx-docker/)
+[![Docker Automated build](https://img.shields.io/docker/automated/mosesliao/cocos2dx-docker.svg?maxAge=2592000?style=plastic)](https://github.com/mosesliao/cocos2dx-docker/)
 
 ## Getting started
 
