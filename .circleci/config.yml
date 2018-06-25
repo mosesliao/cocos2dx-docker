@@ -11,8 +11,10 @@ jobs:
   deploy:
     machine: true
     steps:
-      command: |
-        curl -H "Content-Type: application/json" --data '{"docker_tag": "master"}' -X POST https://registry.hub.docker.com/u/mosesliao/cocos2dx-docker/trigger/67e3c6fa-3bc9-43eb-b7b3-dfd2a91ba919/
+      - run:
+          name: Run docker triggered build
+          command: |
+            curl -H "Content-Type: application/json" --data '{"docker_tag": "master"}' -X POST https://registry.hub.docker.com/u/mosesliao/cocos2dx-docker/trigger/67e3c6fa-3bc9-43eb-b7b3-dfd2a91ba919/
 
 workflows:
   version: 2
