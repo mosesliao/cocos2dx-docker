@@ -11,12 +11,10 @@ jobs:
   deploy:
     machine: true
     steps:
-      - checkout
-      - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
-      - run: docker build 3.16-r13b -t mosesliao/cocos2dx-docker:3.16-r13b
-      - run: docker build -t mosesliao/cocos2dx-docker .
-      - run: docker push mosesliao/cocos2dx-docker:3.16-r13b
-      - run: docker push mosesliao/cocos2dx-docker
+      - run:
+          name: Run docker triggered build
+          command: |
+            curl -H "Content-Type: application/json" --data '{"docker_tag": "master"}' -X POST https://registry.hub.docker.com/u/mosesliao/cocos2dx-docker/trigger/67e3c6fa-3bc9-43eb-b7b3-dfd2a91ba919/
 
 workflows:
   version: 2
