@@ -1,6 +1,9 @@
 # Cocos2dx Android Docker
 [![CircleCI](https://circleci.com/gh/liaogz82/cocos2dx-docker.svg?style=svg)](https://circleci.com/gh/liaogz82/cocos2dx-docker)
-[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/)
+![Docker Stars](https://img.shields.io/docker/stars/mosesliao/cocos2dx-docker.svg)
+![Docker Pulls](https://img.shields.io/docker/pulls/mosesliao/cocos2dx-docker.svg)
+![Docker Automated](https://img.shields.io/docker/automated/mosesliao/cocos2dx-docker.svg)
+![Docker Build](https://img.shields.io/docker/build/mosesliao/cocos2dx-docker.svg)
 
 ## Getting started
 
