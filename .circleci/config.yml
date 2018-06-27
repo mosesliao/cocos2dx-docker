@@ -24,7 +24,7 @@ workflows:
       - build:
           filters:
             branches:
-              except: master
+              ignore: master
       - deploy:
           filters:
             branches:
