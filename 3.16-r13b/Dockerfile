@@ -1,5 +1,7 @@
 FROM ubuntu:18.04
 
+LABEL maintainer="Moses Liao <moses.liao.sd@gmail.com>"
+
 RUN apt-get -y update
 RUN apt-get -y upgrade
 
